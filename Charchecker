@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isDigit(char x){
+    int holder1= (int) x;
+    if(holder1>47&&holder1<58){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+bool isUpper(char x){
+    int holder2 = (int) x;
+    if(holder2>64&& holder2<91){
+        return true;
+    }else{
+        return false;
+    }
+}
+bool isLower(char x){
+    int holder3 = (int)x;
+    if(holder3>96&& holder3<123){
+        return true;
+    }else{
+        return false;
+    }
+}
+int main()
+{
+    char holder;
+    char y='0';
+    printf("Enter a Character: \n");
+    scanf("%c", &holder);
+    printf("%c\n",holder);
+    bool digi=isDigit(holder);
+    bool upper=isUpper(holder);
+    bool lower=isLower(holder);
+    if(digi==true){
+        printf("%c is a digit\n", holder);
+    }else{
+        printf("%c is not a digit\n",holder);
+    }
+    if(upper==true){
+        printf("%c is a upper case letter\n",holder);
+    }else{
+        printf("%c is not a upper case letter\n",holder);
+    }
+    if(lower==true){
+        printf("%c is a lower case letter\n",holder);
+    }else{
+        printf("%c is not a lower case letter\n",holder);
+    }
+    return 0;
+}
